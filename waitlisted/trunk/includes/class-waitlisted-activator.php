@@ -3,11 +3,11 @@
 /**
  * Fired during plugin activation
  *
- * @link       http://example.com
+ * @link       http://waitlisted.co
  * @since      1.0.0
  *
- * @package    Plugin_Name
- * @subpackage Plugin_Name/includes
+ * @package    waitlisted
+ * @subpackage waitlisted/includes
  */
 
 /**
@@ -16,11 +16,11 @@
  * This class defines all code necessary to run during the plugin's activation.
  *
  * @since      1.0.0
- * @package    Plugin_Name
- * @subpackage Plugin_Name/includes
- * @author     Your Name <email@example.com>
+ * @package    waitlisted
+ * @subpackage waitlisted/includes
+ * @author     Justin McNally <justin@waitlisted.co>
  */
-class Plugin_Name_Activator {
+class Waitlisted_Activator {
 
 	/**
 	 * Short Description. (use period)

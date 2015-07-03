@@ -6,11 +6,11 @@
  * Loads and defines the internationalization files for this plugin
  * so that it is ready for translation.
  *
- * @link       http://example.com
+ * @link       http://waitlisted.co
  * @since      1.0.0
  *
- * @package    Plugin_Name
- * @subpackage Plugin_Name/includes
+ * @package    waitlisted
+ * @subpackage waitlisted/includes
  */
 
 /**
@@ -20,11 +20,11 @@
  * so that it is ready for translation.
  *
  * @since      1.0.0
- * @package    Plugin_Name
- * @subpackage Plugin_Name/includes
- * @author     Your Name <email@example.com>
+ * @package    waitlisted
+ * @subpackage waitlisted/includes
+ * @author     Justin McNally <justin@waitlisted.co>
  */
-class Plugin_Name_i18n {
+class Waitlisted_i18n {
 
 	/**
 	 * The domain specified for this plugin.
