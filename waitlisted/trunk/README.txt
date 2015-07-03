@@ -13,6 +13,11 @@ This a plugin that makes it simple to integrate http://waitlisted.co with wordpr
 
 == Description ==
 
+Install, configure, and add a short code. Thats all it takes to start your first waitlist.
+
+Are you a product creator looking to start gathering users before launch. Sign up for waitlisted.co and get started today.
+
+The wordpress plugin makes it easy to build a dynamic, engaging landing page with a few clicks.
 
 == Installation ==
 
