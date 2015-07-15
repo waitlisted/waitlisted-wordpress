@@ -19,6 +19,8 @@ Are you a product creator looking to start gathering users before launch. Sign u
 
 The wordpress plugin makes it easy to build a dynamic, engaging landing page with a few clicks.
 
+Sign up at: https://www.waitlisted.co/users/sign_up
+
 == Installation ==
 
 Install the plugin via the zip. 
@@ -27,6 +29,8 @@ Go to Settings -> Waitlisted.
 Fill in your domain from waitlisted.co (yourapp.app.waitlisted.co)
 Set the color for your waitlisted modal.
 Enter the message you would like to show up when people share your site on social networks.
+
+Follow the complete guide at: https://waitlisted.zendesk.com/hc/en-us/articles/206930677-Installing-The-Plugin
 
 == Frequently Asked Questions ==
 
