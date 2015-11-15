@@ -94,7 +94,20 @@ class Waitlisted_Option {
             'waitlisted_account_section'
             );
 
-        
+        add_settings_field(
+            // ID used to identify the field throughout the theme
+            'waitlisted_custom_form',
+            // The label to the left of the option interface element
+            'Waitlisted Custom Form Id <i>(Optional)</i>',
+            // The name of the function responsible for rendering the option interface
+            array( $this, 'waitlisted_render_form_input_html' ),
+            // The page on which this option will be displayed
+            $this->plugin_name,
+            // The name of the section to which this field belongs
+            'waitlisted_account_section'
+            );
+
+
         // Finally, we register the fields with WordPress
         register_setting(
             // The settings group name. Must exist prior to the register_setting call.
@@ -105,8 +118,16 @@ class Waitlisted_Option {
             array( $this, 'waitlisted_validate_domain' )
             );
 
+        register_setting(
+            // The settings group name. Must exist prior to the register_setting call.
+            'waitlisted_account_section',
+            // The name of an option to sanitize and save.
+            'waitlisted_custom_form',
+            // The callback function for sanitization and validation
+            array( $this, 'waitlisted_validate_custom_form' )
+            );
 
-        
+
     } // end of register_settings
 
 
@@ -130,10 +151,20 @@ class Waitlisted_Option {
 
     }
 
-    
+    public function waitlisted_render_form_input_html() {
+        // First, we read the option from db
+        $waitlisted_form = get_option( 'waitlisted_custom_form', '' );
+
+        // Next, we need to make sure the element is defined in the options. If not, we'll set an empty string.
+        // Render the output
+        echo '<input type="text" id="waitlisted_input_form" name="waitlisted_custom_form" size="40" value="' . $waitlisted_form . '" />';
+
+    }
 
 
-    
+
+
+
     /**
      * Sanitization callback for the domain option.
      * Use is_email for Sanitization
@@ -157,6 +188,18 @@ class Waitlisted_Option {
         $output = $waitlisted_domain;
         add_settings_error( 'waitlisted_account_section', 'invalid-domain', __( 'You have entered an invalid domain.', $this->plugin_name ) );
       }
+
+      return $output;
+
+    }
+
+    public function waitlisted_validate_custom_form ( $input ) {
+      // Get old value from DB
+      $waitlisted_form = get_option( 'waitlisted_custom_form' );
+
+      // Don't trust users
+
+      $output = $input;
 
       return $output;
 

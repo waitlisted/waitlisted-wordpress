@@ -104,7 +104,7 @@ class Waitlisted_Public {
 	     true
 		);
 		wp_enqueue_script( 'wl-embed' );
-		wp_localize_script( 'wl-embed', 'wlParams', array( 'domain' => get_option( 'waitlisted_domain', '' ) ) );
+		wp_localize_script( 'wl-embed', 'wlParams', array( 'domain' => get_option( 'waitlisted_domain', '' ), 'form' => get_option( 'waitlisted_custom_form', '' ) ) );
 
 		wp_enqueue_script( $this->plugin_name, "https://waitlisted.co/assets/v2/embed.js", array(), $this->version, false );
 

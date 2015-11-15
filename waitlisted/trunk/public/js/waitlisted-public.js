@@ -1,4 +1,7 @@
 document.addEventListener("DOMContentLoaded", function(event) {
-  window.waitlisted.start({domain: wlParams.domain})
+  options = {domain: wlParams.domain}
+  if (wlParams.form && wlParams.form.length > 0) {
+    options.form = wlParams.form;
+  }
+  window.waitlisted.start(options);
 });
-
