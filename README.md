@@ -10,7 +10,7 @@ Fill out the domain, color and social sharing message for your waitlist.
 
 Save it.
 
-Place a waitlist button anywhere in your page by including the short code. 
+Place a waitlist button anywhere in your page by including the short code.
 
 ```
 [waitlisted]
@@ -28,4 +28,10 @@ or customize the content of the CTA with
 [waitlisted]
 <b>Any custom</b> Content or HTML that you want.
 [/waitlisted]
+```
+
+You can also use a custom form by including the id in the shortcode
+
+```
+[waitlisted form="902490239102342"]
 ```
