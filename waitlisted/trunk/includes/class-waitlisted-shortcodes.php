@@ -2,21 +2,29 @@
 
 class Waitlisted_Shortcodes {
   public static function waitlist_cta ($attrs, $content) {
+
+    if (is_array($attrs) && array_key_exists("form", $attrs)) {
+      $form_id = $attrs["form"];
+    }
+    else {
+      $form_id = "";
+    }
+
     if (is_array($attrs) && array_key_exists("title", $attrs)) {
       $title = $attrs["title"];
     }
     else {
       $title = "";
     }
-    $inner = "<button>Join the Waitlist</button>";
+    $inner = "<button data-form='$form_id'>Join the Waitlist</button>";
 
     if (!empty($content)) {
       $inner = $content;
     }
     elseif (!empty($title)) {
-      $inner = "<button>$title</button>";
+      $inner = "<button data-form='$form_id'>$title</button>";
     }
-    return "<a class=\"waitlisted-cta\" href=\"#\">$inner</a>";
+    return "<a href=\"#waitlisted\" data-form='$form_id'>$inner</a>";
   }
 
 }

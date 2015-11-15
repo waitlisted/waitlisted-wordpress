@@ -95,7 +95,7 @@ class Waitlisted_Public {
 		 * between the defined hooks and the functions defined in this
 		 * class.
 		 */
-		
+
 		wp_register_script(
 	    'wl-embed',
 	     plugin_dir_url( __FILE__ ) . 'js/waitlisted-public.js',
@@ -106,7 +106,7 @@ class Waitlisted_Public {
 		wp_enqueue_script( 'wl-embed' );
 		wp_localize_script( 'wl-embed', 'wlParams', array( 'domain' => get_option( 'waitlisted_domain', '' ) ) );
 
-		wp_enqueue_script( $this->plugin_name, "https://www.waitlisted.co/assets/embed.js", array(), $this->version, false );
+		wp_enqueue_script( $this->plugin_name, "https://waitlisted.co/assets/v2/embed.js", array(), $this->version, false );
 
 	}
 

@@ -1,6 +1,4 @@
 <?php
-ini_set("display_errors", "1");
-error_reporting(E_ALL);
 
 /**
  * The plugin bootstrap file
@@ -18,7 +16,7 @@ error_reporting(E_ALL);
  * Plugin Name:       waitlisted.co
  * Plugin URI:        http://waitlisted.co
  * Description:       Easily use waitlisted with wordpress.
- * Version:           1.0.0
+ * Version:           1.2.0
  * Author:            waitlisted.co
  * Author URI:        http://waitlisted.co
  * License:           GPL-2.0+
